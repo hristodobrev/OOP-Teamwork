@@ -47,5 +47,3 @@ IControlable - holds methods Move() and Flee()
 IConsumable - holds the property Ammount and Enumeration PotionType(Health, Energy)
 IEquipable - holds the properties HealthModifier, EnergyModifier, DefensePointsModifier, AttackPointsModifier
 IUpdatable - holds the method Update()
-
-text
