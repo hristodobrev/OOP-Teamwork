@@ -2,28 +2,27 @@
 {
     using System.Collections.Generic;
 
-    using RPG_Game.Entities.Items;
+    using RPG_Game.Items;
+    using Interfaces;
 
-    public abstract class Character : GameObject
+    public abstract class Character : Entity, IControlable
     {
         private List<Item> inventory;
 
-        protected Character(string id, int health, int energy, int attackPoints, int defensePoints)
-            : base(id)
+        protected Character(string id, int health, int energy, int attackPoints, int defensePoints, int x, int y)
+            : base(id, health, energy, attackPoints, defensePoints, x, y)
         {
             this.inventory = new List<Item>();
-            this.Health = health;
-            this.Energy = energy;
-            this.AttackPoints = attackPoints;
-            this.DefensePoints = defensePoints;
         }
 
-        public int Health { get; set; }
+        public void Move()
+        {
+            throw new System.NotImplementedException();
+        }
 
-        public int Energy { get; set; }
-
-        public int AttackPoints { get; set; }
-
-        public int DefensePoints { get; set; }
+        public void Flee(Enemy enemy)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
