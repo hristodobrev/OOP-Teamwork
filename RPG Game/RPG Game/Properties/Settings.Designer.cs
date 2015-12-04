@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RPG_Game.Properties
+namespace RPG_XAML.Properties
 {
 
 

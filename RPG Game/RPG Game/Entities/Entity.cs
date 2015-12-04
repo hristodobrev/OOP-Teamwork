@@ -1,8 +1,7 @@
 ﻿namespace RPG_Game.Entities
 {
-    using System.Drawing;
-
     using Interfaces;
+    using System.Windows.Controls;
 
     public abstract class Entity : IUpdatable
     {

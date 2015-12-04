@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-namespace RPG_Game.Core
+﻿namespace RPG_Game.Core
 {
     public class GameEngine
     {
@@ -10,7 +9,7 @@ namespace RPG_Game.Core
 
         public void Run()
         {
-            MessageBox.Show("The Engine runs successfully");
+            
         }
     }
 }
