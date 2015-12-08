@@ -22,7 +22,8 @@ namespace RPG_GAME
     {
         public MainWindow()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            CharacterImage.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/CharRight.jpg"));
         }
     }
 }

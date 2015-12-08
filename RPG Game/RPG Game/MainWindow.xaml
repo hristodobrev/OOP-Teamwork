@@ -7,6 +7,11 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
+        <Image x:Name="CharacterImage" HorizontalAlignment="Left" Height="100" Margin="288,133,0,0" VerticalAlignment="Top" Width="100">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
+        </Image>
 
     </Grid>
 </Window>
