@@ -26,7 +26,37 @@ namespace RPG_Game
         {
             InitializeComponent();
 
+            char[,] map = new char[,]
+            {
+                {'#', '#', '@'},
+                {'#', ' ', '#'},
+                {'#', ' ', '@'}
+            };
 
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Image myImage = new Image();
+
+                    switch (map[i, j])
+                    {
+                        case '#':
+                            myImage.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/tree.png"));
+                            break;
+                        case '@':
+                            myImage.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/water.png"));
+                            break;
+                    }
+                    int x = (i) * 50;
+                    int y = (j) * 50;
+
+                    Canvas.SetTop(myImage, x);
+                    Canvas.SetLeft(myImage, y);
+
+                    GamePlayLayout.Children.Add(myImage);
+                }
+            }
         }
     }
 }
