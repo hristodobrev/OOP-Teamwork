@@ -25,9 +25,12 @@ namespace RPG_Game
             InitializeComponent();
         }
 
-        private void PlayButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Content = new Gameplay();
+            Gameplay game = new Gameplay();
+
+            game.Show();
+            this.Close();
         }
     }
 }

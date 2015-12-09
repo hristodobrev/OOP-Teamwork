@@ -19,17 +19,14 @@ namespace RPG_Game
     /// <summary>
     /// Interaction logic for Gameplay.xaml
     /// </summary>
-    public partial class Gameplay : UserControl
+    public partial class Gameplay : Window
     {
-        //private static GameEngine Engine { get; set; }
 
         public Gameplay()
         {
             InitializeComponent();
 
-            GameEngine Engine = new GameEngine();
 
-            CompositionTarget.Rendering += Engine.Run;
         }
     }
 }
