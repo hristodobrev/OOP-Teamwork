@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace RPG_GAME
+namespace RPG_Game
 {
     /// <summary>
     /// Interaction logic for App.xaml

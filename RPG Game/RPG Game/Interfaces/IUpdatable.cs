@@ -1,10 +1,9 @@
-﻿namespace RPG_Game.Interfaces
+﻿using RPG_Game.Enums;
+namespace RPG_Game.Interfaces
 {
     public interface IUpdatable
     {
-        int X { get; set; }
-
-        int Y { get; set; }
+        Position Position { get; set; }
 
         void Update();
     }

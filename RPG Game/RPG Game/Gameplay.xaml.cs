@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPG_Game.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,18 +17,19 @@ using System.Windows.Shapes;
 namespace RPG_Game
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Gameplay.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Gameplay : UserControl
     {
-        public MainWindow()
+        //private static GameEngine Engine { get; set; }
+
+        public Gameplay()
         {
             InitializeComponent();
-        }
 
-        private void PlayButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Content = new Gameplay();
+            GameEngine Engine = new GameEngine();
+
+            CompositionTarget.Rendering += Engine.Run;
         }
     }
 }
