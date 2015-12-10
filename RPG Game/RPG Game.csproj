@@ -125,14 +125,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\background.jpg" />
     <Resource Include="Resources\bridge.png" />
     <Resource Include="Resources\grass.png" />
     <Resource Include="Resources\playGround.jpg" />
-    <Resource Include="Resources\tree.png" />
     <Resource Include="Resources\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tree1.png" />
+    <Resource Include="Resources\tree2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CharRight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\player.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
