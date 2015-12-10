@@ -35,7 +35,11 @@ namespace RPG_Game
 
         private void CreditsButton_Click(object sender, RoutedEventArgs e)
         {
+            Credits credits = new Credits();
+
+            credits.Show();
             this.Close();
+
         }
 
         private void QuitButton_Click(object sender, RoutedEventArgs e)

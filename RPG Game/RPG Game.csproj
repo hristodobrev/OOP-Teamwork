@@ -54,6 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Credits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Gameplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -68,6 +72,9 @@
     </Compile>
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Core\GameEngine.cs" />
+    <Compile Include="Credits.xaml.cs">
+      <DependentUpon>Credits.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Characters\Character.cs" />
     <Compile Include="Entities\Characters\Mage.cs" />
     <Compile Include="Entities\Characters\Priest.cs" />
@@ -125,7 +132,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\background.jpg" />
     <Resource Include="Resources\bridge.png" />
@@ -133,6 +139,9 @@
     <Resource Include="Resources\playGround.jpg" />
     <Resource Include="Resources\tree.png" />
     <Resource Include="Resources\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\background-for-credits.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
