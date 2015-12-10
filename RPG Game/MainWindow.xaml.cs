@@ -33,6 +33,14 @@ namespace RPG_Game
             this.Close();
         }
 
-      
+        private void CreditsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void QuitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
