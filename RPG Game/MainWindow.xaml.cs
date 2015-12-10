@@ -17,6 +17,7 @@ namespace RPG_Game
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// some more reference
     /// </summary>
     public partial class MainWindow : Window
     {

@@ -60,3 +60,6 @@ C:\Users\nikidimitrow\Desktop\other-try-to-oop\OOP-Teamwork\RPG Game\obj\Debug\R
 C:\Users\nikidimitrow\Desktop\other-try-to-oop\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.g.resources
 C:\Users\nikidimitrow\Desktop\other-try-to-oop\OOP-Teamwork\RPG Game\obj\Debug\RPG_Game.Properties.Resources.resources
 C:\Users\nikidimitrow\Desktop\other-try-to-oop\OOP-Teamwork\RPG Game\obj\Debug\RPG Game.csproj.GenerateResource.Cache
+C:\Users\nikidimitrow\Desktop\oop-game\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.exe.config
+C:\Users\nikidimitrow\Desktop\oop-game\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.exe
+C:\Users\nikidimitrow\Desktop\oop-game\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.pdb
