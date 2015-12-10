@@ -28,12 +28,24 @@ namespace RPG_Game
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            Gameplay game = new Gameplay();
+            Gameplay game = new Gameplay(this);
 
             game.Show();
-            this.Close();
+            this.Hide();
         }
 
-      
+        private void CreditsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Credits credits = new Credits(this);
+
+            credits.Show();
+            this.Hide();
+
+        }
+
+        private void QuitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
