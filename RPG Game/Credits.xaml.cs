@@ -19,9 +19,17 @@ namespace RPG_Game
     /// </summary>
     public partial class Credits : Window
     {
-        public Credits()
+        MainWindow parent = null;
+        public Credits(MainWindow _parent)
         {
+            parent = _parent;
+            
             InitializeComponent();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.parent.Show();
         }
     }
 }

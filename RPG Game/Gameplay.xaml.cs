@@ -22,9 +22,13 @@ namespace RPG_Game
     public partial class Gameplay : Window
     {
 
-        public Gameplay()
+        MainWindow gamePlayerParent = null;
+        public Gameplay(MainWindow _gamePlayerParent)
         {
+            gamePlayerParent = _gamePlayerParent;
+
             InitializeComponent();
+
 
             char[,] map = new char[,]
             {
@@ -55,8 +59,15 @@ namespace RPG_Game
                     Canvas.SetLeft(myImage, y);
 
                     GamePlayLayout.Children.Add(myImage);
+                 
                 }
             }
+          
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.gamePlayerParent.Show();
         }
     }
 }
