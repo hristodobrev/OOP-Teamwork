@@ -10,9 +10,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace RPG_Game
 {
@@ -28,8 +30,6 @@ namespace RPG_Game
             gamePlayerParent = _gamePlayerParent;
 
             InitializeComponent();
-
-
             char[,] map = new char[,]
             {
                 {'#', '#', '@'},
@@ -42,6 +42,8 @@ namespace RPG_Game
                 for (int j = 0; j < 3; j++)
                 {
                     Image myImage = new Image();
+                    myImage.Width = 60;
+                    myImage.Height = 60;
 
                     switch (map[i, j])
                     {

@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace RPG_Game
 {
     /// <summary>
-    /// Interaction logic for Credits.xaml
+    /// 
     /// </summary>
     public partial class Credits : Window
     {
@@ -23,7 +23,6 @@ namespace RPG_Game
         public Credits(MainWindow _parent)
         {
             parent = _parent;
-            
             InitializeComponent();
         }
 

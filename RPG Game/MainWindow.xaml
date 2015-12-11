@@ -13,7 +13,6 @@
                 <ColumnDefinition Width="0*"/>
             </Grid.ColumnDefinitions>
         </Grid>-->
-
         <Button Content="Play" 
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
@@ -40,7 +39,7 @@
             VerticalAlignment="Top" 
             Width="155" Canvas.Left="735" 
             Canvas.Top="505" FontSize="24" 
-            FontFamily="Segoe UI Semibold" 
+            FontFamily="Segoe UI Semibold"
             Click="CreditsButton_Click" Foreground="#FFB9D4F0" >
             <Button.BorderBrush>
                 <ImageBrush/>
@@ -49,13 +48,12 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-
         <Button x:Name="QuitButton" 
                 Content="Quit" 
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
                 Width="155" Canvas.Left="735" 
-                Canvas.Top="558" 
+                Canvas.Top="558"
                 Click="QuitButton_Click" Foreground="#FFC4D3E6"
                 OpacityMask="Black" 
                 FontFamily="Segoe UI Semibold" 
@@ -67,6 +65,5 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-
     </Canvas>
 </Window>

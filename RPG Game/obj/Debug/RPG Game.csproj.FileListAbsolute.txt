@@ -1,0 +1,76 @@
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\bin\Debug\RPG XAML.exe
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\bin\Debug\RPG XAML.exe.config
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\RPG Game.csprojResolveAssemblyReference.cache
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\Gameplay.baml
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\MainWindow.baml
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\Gameplay.g.cs
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\MainWindow.g.cs
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\App.g.cs
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\RPG XAML_MarkupCompile.cache
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\RPG XAML.g.resources
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\RPG_Game.Properties.Resources.resources
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\RPG Game.csproj.GenerateResource.Cache
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\RPG XAML.exe
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\obj\Debug\RPG XAML.pdb
+D:\XXXXXX\OOP-Teamwork-master\OOP-Teamwork-master\RPG Game\RPG Game\bin\Debug\RPG XAML.pdb
+D:\XXXXXX\RPG Game\RPG Game\bin\Debug\RPG XAML.exe.config
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\RPG XAML.exe
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\RPG XAML.pdb
+D:\XXXXXX\RPG Game\RPG Game\bin\Debug\RPG XAML.exe
+D:\XXXXXX\RPG Game\RPG Game\bin\Debug\RPG XAML.pdb
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\RPG Game.csprojResolveAssemblyReference.cache
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\Gameplay.baml
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\MainWindow.baml
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\Gameplay.g.cs
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\MainWindow.g.cs
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\App.g.cs
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\RPG XAML_MarkupCompile.cache
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\RPG XAML.g.resources
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\RPG_Game.Properties.Resources.resources
+D:\XXXXXX\RPG Game\RPG Game\obj\Debug\RPG Game.csproj.GenerateResource.Cache
+D:\XXXXXX\RPG Game\bin\Debug\RPG XAML.exe.config
+D:\XXXXXX\RPG Game\obj\Debug\RPG XAML.exe
+D:\XXXXXX\RPG Game\obj\Debug\RPG XAML.pdb
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\bin\Debug\RPG XAML.exe.config
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\bin\Debug\RPG XAML.exe
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\bin\Debug\RPG XAML.pdb
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\Gameplay.baml
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\MainWindow.baml
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\Gameplay.g.cs
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\MainWindow.g.cs
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\App.g.cs
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\RPG XAML_MarkupCompile.cache
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\RPG XAML.g.resources
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\RPG_Game.Properties.Resources.resources
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\RPG Game.csproj.GenerateResource.Cache
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\RPG XAML.exe
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\RPG XAML.pdb
+D:\Visual studio 2013\Projects\OOP-Teamwork-master\RPG Game\obj\Debug\RPG Game.csprojResolveAssemblyReference.cache
+D:\XXXXXX\RPG Game\bin\Debug\RPG XAML.exe
+D:\XXXXXX\RPG Game\bin\Debug\RPG XAML.pdb
+D:\XXXXXX\RPG Game\obj\Debug\RPG Game.csprojResolveAssemblyReference.cache
+D:\XXXXXX\RPG Game\obj\Debug\Gameplay.baml
+D:\XXXXXX\RPG Game\obj\Debug\MainWindow.baml
+D:\XXXXXX\RPG Game\obj\Debug\Gameplay.g.cs
+D:\XXXXXX\RPG Game\obj\Debug\MainWindow.g.cs
+D:\XXXXXX\RPG Game\obj\Debug\App.g.cs
+D:\XXXXXX\RPG Game\obj\Debug\RPG XAML_MarkupCompile.cache
+D:\XXXXXX\RPG Game\obj\Debug\RPG XAML.g.resources
+D:\XXXXXX\RPG Game\obj\Debug\RPG_Game.Properties.Resources.resources
+D:\XXXXXX\RPG Game\obj\Debug\RPG Game.csproj.GenerateResource.Cache
+D:\Others\OOP\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.exe.config
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\Credits.baml
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\Gameplay.baml
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\Credits.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\Gameplay.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\App.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML_MarkupCompile.cache
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\MainWindow.baml
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\MainWindow.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.g.resources
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG_Game.Properties.Resources.resources
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG Game.csproj.GenerateResource.Cache
+D:\Others\OOP\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.exe
+D:\Others\OOP\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.pdb
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.exe
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.pdb
