@@ -74,3 +74,4 @@ D:\Others\OOP\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.exe
 D:\Others\OOP\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.pdb
 D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.exe
 D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.pdb
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG Game.csprojResolveAssemblyReference.cache

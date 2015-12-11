@@ -114,8 +114,18 @@
             }
         }
 
-        public Position Position { get; set; }
+        public Position Position
+        {
+            get
+            {
+                return position;
+            }
 
+            set
+            {
+                this.position = value;
+            }
+        }
         public void Update()
         {
             throw new System.NotImplementedException();
