@@ -81,6 +81,7 @@
     <Compile Include="Entities\Characters\Warrior.cs" />
     <Compile Include="Entities\Enemy.cs" />
     <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Enums\Direction.cs" />
     <Compile Include="Enums\Position.cs" />
     <Compile Include="Enums\PotionType.cs" />
     <Compile Include="Exceptions\EntityNameException.cs" />

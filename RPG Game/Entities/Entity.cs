@@ -3,6 +3,7 @@
     using Interfaces;
     using RPG_Game.Enums;
     using RPG_Game.Exceptions;
+    using System.Windows;
     using System.Windows.Controls;
 
     public abstract class Entity : IUpdatable
@@ -16,10 +17,9 @@
         private int defensePoints;
         private Position position;
 
-        protected Entity(string id, Image image, int health, int energy, int attackPoints, int defensePoints, int x, int y)
+        protected Entity(string id, int health, int energy, int attackPoints, int defensePoints, int x, int y)
         {
             this.Id = id;
-            this.Image = image;
             this.Health = health;
             this.Energy = energy;
             this.AttackPoints = attackPoints;
@@ -118,17 +118,22 @@
         {
             get
             {
-                return position;
+                return this.position;
             }
-
             set
             {
                 this.position = value;
             }
         }
-        public void Update()
+
+        public virtual void Update(Canvas GamePlayLayout)
         {
-            throw new System.NotImplementedException();
+            GamePlayLayout.Children.Remove(this.Image);
+
+            Canvas.SetLeft(this.Image, this.Position.X);
+            Canvas.SetTop(this.Image, this.Position.Y);
+
+            GamePlayLayout.Children.Add(this.Image);
         }
     }
 }

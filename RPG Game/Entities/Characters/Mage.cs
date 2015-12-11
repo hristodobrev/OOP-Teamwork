@@ -5,8 +5,8 @@
 
     public class Mage : Character
     {
-        public Mage(string id, Image image, int x, int y)
-            : base(id, image, Constants.CharacterHealth, Constants.CharacterEnergy, Constants.CharacterAttackPoints, Constants.CharacterDefensePoints, x, y)
+        public Mage(string id, int x, int y)
+            : base(id, Constants.CharacterHealth, Constants.CharacterEnergy, Constants.CharacterAttackPoints, Constants.CharacterDefensePoints, x, y)
         {
             
         }

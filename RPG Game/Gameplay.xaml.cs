@@ -1,5 +1,7 @@
 ﻿using RPG_Game.Core;
+using RPG_Game.Entities;
 using RPG_Game.Entities.Characters;
+using RPG_Game.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,9 +26,10 @@ namespace RPG_Game
     /// </summary>
     public partial class Gameplay : Window
     {
-        Image playerImage = new Image();
-        Character player = new Mage("Pencho", playerImage, 200, 400);
-        Point mousePoint = new Point(400, 200);
+        private Character player = new Mage("Pancho", 200, 200);
+        private Point mousePoint = new Point(200, 200);
+        private List<Position> enemiesPositions = new List<Position>();
+        private List<Enemy> enemies = new List<Enemy>();
 
         MainWindow gamePlayerParent = null;
         public Gameplay(MainWindow _gamePlayerParent)
@@ -35,13 +38,37 @@ namespace RPG_Game
 
             InitializeComponent();
             PrintMap();
+            enemiesPositions.Add(new Position(50, 100));
+            enemiesPositions.Add(new Position(550, 240));
+            enemiesPositions.Add(new Position(150, 390));
+            enemiesPositions.Add(new Position(380, 290));
+            enemiesPositions.Add(new Position(430, 500));
+
+            GenerateEnemies();
+            PrintEnemies();
 
             DispatcherTimer dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += (DispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             dispatcherTimer.Start();
 
-            PrintPlayer();
+            player.Update(GamePlayLayout);
+        }
+
+        private void PrintEnemies()
+        {
+            foreach (var enemy in enemies)
+            {
+                enemy.Update(GamePlayLayout);
+            }
+        }
+
+        private void GenerateEnemies()
+        {
+            foreach (var enemy in enemiesPositions)
+            {
+                enemies.Add(new Enemy(("Enemy" + (enemy.Y + enemy.X).ToString()), enemy.X, enemy.Y));
+            }
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -51,47 +78,29 @@ namespace RPG_Game
 
         private void DispatcherTimer_Tick(object sender, EventArgs e)
         {
-
-            if (player.Position.X < mousePoint.X)
+            if (player.Position.X < mousePoint.X - (player.Image.Width / 2))
             {
-                player.Position.X++;
-                GamePlayLayout.Children.Remove(playerImage);
-                PrintPlayer();
+                player.Move(Direction.Right, this.enemiesPositions);
+                player.Update(GamePlayLayout);
             }
 
-            if (player.Position.X > mousePoint.X)
+            if (player.Position.X > mousePoint.X - (player.Image.Width / 2))
             {
-                player.Position.X--;
-                GamePlayLayout.Children.Remove(playerImage);
-                PrintPlayer();
+                player.Move(Direction.Left, this.enemiesPositions);
+                player.Update(GamePlayLayout);
             }
 
-            if (player.Position.Y < mousePoint.Y)
+            if (player.Position.Y < mousePoint.Y - (player.Image.Height / 2))
             {
-                player.Position.Y++;
-                GamePlayLayout.Children.Remove(playerImage);
-                PrintPlayer();
+                player.Move(Direction.Down, this.enemiesPositions);
+                player.Update(GamePlayLayout);
             }
 
-            if (player.Position.Y > mousePoint.Y)
+            if (player.Position.Y > mousePoint.Y - (player.Image.Height / 2))
             {
-                player.Position.Y--;
-                GamePlayLayout.Children.Remove(playerImage);
-                PrintPlayer();
+                player.Move(Direction.Up, this.enemiesPositions);
+                player.Update(GamePlayLayout);
             }
-        }
-
-        private void PrintPlayer()
-        {
-            playerImage = new Image();
-            playerImage.Width = 50;
-            playerImage.Height = 50;
-            playerImage.Source = new BitmapImage(new Uri(@"D:\Others\OOP\OOP-Teamwork\RPG Game\Resources\player.png"));
-
-            Canvas.SetLeft(playerImage, player.Position.X);
-            Canvas.SetTop(playerImage, player.Position.Y);
-
-            GamePlayLayout.Children.Add(playerImage);
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -141,7 +150,6 @@ namespace RPG_Game
                     Canvas.SetLeft(myImage, y);
 
                     GamePlayLayout.Children.Add(myImage);
-
                 }
             }
         }

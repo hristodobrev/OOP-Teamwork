@@ -19,19 +19,13 @@
         {
             if (this.player.isAlive)
             {
-                this.player.Update();
+
             }
         }
 
         private void Initialize()
         {
-            var img = new Image();
-            img.Name = "Player Image";
-            img.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/CharRight.jpg"));
-            img.Width = 28;
-            img.Height = 32;
-
-            this.player = new Mage("Mage", img, 10, 10);
+            this.player = new Mage("Mage", 10, 10);
         }
     }
 }
