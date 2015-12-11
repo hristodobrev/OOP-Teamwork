@@ -1,9 +1,7 @@
-﻿using RPG_Game.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,16 +15,21 @@ using System.Windows.Shapes;
 namespace RPG_Game
 {
     /// <summary>
-    /// Interaction logic for Gameplay.xaml
+    /// Interaction logic for Credits.xaml
     /// </summary>
-    public partial class Gameplay : Window
+    public partial class Credits : Window
     {
-
-        public Gameplay()
+        MainWindow parent = null;
+        public Credits(MainWindow _parent)
         {
+            parent = _parent;
+            
             InitializeComponent();
+        }
 
-
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.parent.Show();
         }
     }
 }
