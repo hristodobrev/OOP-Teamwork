@@ -4,17 +4,30 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\
+=======
+C:\Users\nikidimitrow\Desktop\oop-softuni\OOP-Teamwork\RPG Game\obj\Debug\
+>>>>>>> 5924f0903f132e2a9b91b273a701323c2cb5ebd6
 RPG_Game
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\App.xaml
 41960536966
 
 341973703806
 121654848548
 Credits.xaml;FightField.xaml;Gameplay.xaml;MainWindow.xaml;
+=======
+C:\Users\nikidimitrow\Desktop\oop-softuni\OOP-Teamwork\RPG Game\App.xaml
+3-1024301004
+
+33-1514559409
+121654848548
+Credits.xaml;Gameplay.xaml;MainWindow.xaml;
+>>>>>>> 5924f0903f132e2a9b91b273a701323c2cb5ebd6
 
 False
 
