@@ -75,3 +75,23 @@ D:\Others\OOP\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.pdb
 D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.exe
 D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.pdb
 D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG Game.csprojResolveAssemblyReference.cache
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.exe.config
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\RPG Game.csprojResolveAssemblyReference.cache
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\Credits.baml
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\Gameplay.baml
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\MainWindow.baml
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\Credits.g.cs
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\Gameplay.g.cs
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\MainWindow.g.cs
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\App.g.cs
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML_MarkupCompile.cache
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.g.resources
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\RPG_Game.Properties.Resources.resources
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\RPG Game.csproj.GenerateResource.Cache
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.exe
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.pdb
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.exe
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.pdb
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\FightField.g.cs
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML_MarkupCompile.lref
+C:\Users\nikidimitrow\Desktop\_\OOP-Teamwork\RPG Game\obj\Debug\FightField.baml

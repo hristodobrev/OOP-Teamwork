@@ -58,6 +58,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FightField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Gameplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +90,9 @@
     <Compile Include="Enums\PotionType.cs" />
     <Compile Include="Exceptions\EntityNameException.cs" />
     <Compile Include="Exceptions\EntityStatOutOfRangeException.cs" />
+    <Compile Include="FightField.xaml.cs">
+      <DependentUpon>FightField.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gameplay.xaml.cs">
       <DependentUpon>Gameplay.xaml</DependentUpon>
     </Compile>
@@ -143,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\background-for-credits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\fightfield.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

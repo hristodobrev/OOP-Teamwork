@@ -45,7 +45,7 @@
             Image enemyImage = new Image();
             enemyImage.Width = 25;
             enemyImage.Height = 25;
-            enemyImage.Source = new BitmapImage(new Uri(@"D:\Others\OOP\OOP-Teamwork\RPG Game\Resources\player.png"));
+            enemyImage.Source = new BitmapImage(new Uri(@"C:\Users\nikidimitrow\Desktop\oop\OOP-Teamwork\RPG Game\Resources\player.png"));
             this.Image = enemyImage;
         }
     }

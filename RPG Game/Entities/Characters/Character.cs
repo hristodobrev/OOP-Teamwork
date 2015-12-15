@@ -14,9 +14,18 @@
     {
         private List<Item> inventory;
 
+        Dictionary<string, object> playerData = new Dictionary<string, object>();
+
         protected Character(string id, int health, int energy, int attackPoints, int defensePoints, int x, int y)
             : base(id, health, energy, attackPoints, defensePoints, x, y)
         {
+            this.playerData.Clear();
+            this.playerData.Add("id", id);
+            this.playerData.Add("health", health);
+            this.playerData.Add("energy", energy);
+            this.playerData.Add("attackPoints", attackPoints);
+            this.playerData.Add("defensePoints", defensePoints);
+
             this.inventory = new List<Item>();
             this.GeneratePlayerImage();
         }
@@ -53,6 +62,8 @@
                 if (Math.Abs(enemy.X - this.Position.X) < 15 && Math.Abs(enemy.Y - this.Position.Y) < 15)
                 {
                     this.Position = previousPosition;
+                    FightField fieldWindow = new FightField(enemy, playerData);
+                    fieldWindow.ShowDialog();
                     return;
                 }
             }
@@ -68,8 +79,13 @@
             Image playerImage = new Image();
             playerImage.Width = 25;
             playerImage.Height = 25;
-            playerImage.Source = new BitmapImage(new Uri(@"D:\Others\OOP\OOP-Teamwork\RPG Game\Resources\player.png"));
+            playerImage.Source = new BitmapImage(new Uri(@"C:\Users\nikidimitrow\Desktop\oop\OOP-Teamwork\RPG Game\Resources\player.png"));
             this.Image = playerImage;
+        }
+
+        private void settingsButton_Click(Object sender, EventArgs e)
+        {
+
         }
     }
 }
