@@ -27,7 +27,5 @@
         {
             this.player = new Mage("Mage", 10, 10);
         }
-
-       
     }
 }

@@ -26,10 +26,10 @@ namespace RPG_Game
     /// </summary>
     public partial class Gameplay : Window
     {
-        private Character player = new Mage("Pancho", 200, 200);
-        private Point mousePoint = new Point(200, 200);
-        private List<Position> enemiesPositions = new List<Position>();
-        private List<Enemy> enemies = new List<Enemy>();
+        protected Character player = new Mage("Pancho", 200, 200);
+        protected Point mousePoint = new Point(200, 200);
+        protected List<Position> enemiesPositions = new List<Position>();
+        protected List<Enemy> enemies = new List<Enemy>();
 
         MainWindow gamePlayerParent = null;
         public Gameplay(MainWindow _gamePlayerParent)
@@ -39,6 +39,7 @@ namespace RPG_Game
             InitializeComponent();
             PrintMap();
             enemiesPositions.Add(new Position(50, 100));
+            enemiesPositions.Add(new Position(150, 150));
             enemiesPositions.Add(new Position(550, 240));
             enemiesPositions.Add(new Position(150, 390));
             enemiesPositions.Add(new Position(380, 290));
@@ -80,25 +81,25 @@ namespace RPG_Game
         {
             if (player.Position.X < mousePoint.X - (player.Image.Width / 2))
             {
-                player.Move(Direction.Right, this.enemiesPositions);
+                player.Move(Direction.Right, this.enemies, GamePlayLayout);
                 player.Update(GamePlayLayout);
             }
 
             if (player.Position.X > mousePoint.X - (player.Image.Width / 2))
             {
-                player.Move(Direction.Left, this.enemiesPositions);
+                player.Move(Direction.Left, this.enemies, GamePlayLayout);
                 player.Update(GamePlayLayout);
             }
 
             if (player.Position.Y < mousePoint.Y - (player.Image.Height / 2))
             {
-                player.Move(Direction.Down, this.enemiesPositions);
+                player.Move(Direction.Down, this.enemies, GamePlayLayout);
                 player.Update(GamePlayLayout);
             }
 
             if (player.Position.Y > mousePoint.Y - (player.Image.Height / 2))
             {
-                player.Move(Direction.Up, this.enemiesPositions);
+                player.Move(Direction.Up, this.enemies, GamePlayLayout);
                 player.Update(GamePlayLayout);
             }
         }
@@ -137,10 +138,10 @@ namespace RPG_Game
                     switch (map[i, j])
                     {
                         case '#':
-                            myImage.Source = new BitmapImage(new Uri(@"C:\Users\nikidimitrow\Desktop\oop\OOP-Teamwork\RPG Game\Resources\tree2.png"));
+                            myImage.Source = new BitmapImage(new Uri(@"D:\Others\OOP\OOP-Teamwork\RPG Game\Resources\tree2.png"));
                             break;
                         case '@':
-                            myImage.Source = new BitmapImage(new Uri(@"C:\Users\nikidimitrow\Desktop\oop\OOP-Teamwork\RPG Game\Resources\tree1.png"));
+                            myImage.Source = new BitmapImage(new Uri(@"D:\Others\OOP\OOP-Teamwork\RPG Game\Resources\tree1.png"));
                             break;
                     }
                     int x = (i) * 50;

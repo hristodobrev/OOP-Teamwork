@@ -1,7 +1,9 @@
-﻿using System;
+﻿using RPG_Game.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -18,28 +20,66 @@ namespace RPG_Game
     /// </summary>
     public partial class FightField : Window
     {
-        private Dictionary<string, object> playerData;
-        private Dictionary<string, object> enemyData;
+        static Random rnd = new Random();
 
         public FightField()
         {
             InitializeComponent();
         }
 
-        public FightField(object location, Dictionary<string, object> data )
+        public FightField(Entity enemy, Entity player)
         {
-            playerData = data;
-            //Generate gad:
-            enemyData = new Dictionary<string, object>();
-            Random rg = new Random();
-
-            this.enemyData.Add("id","Enemy Gad");
-            this.enemyData.Add("health", rg.Next(int.Parse(this.playerData["health"].ToString())));
-            this.enemyData.Add("energy", rg.Next(int.Parse(this.playerData["energy"].ToString())));
-            this.enemyData.Add("attackPoints", rg.Next(int.Parse(this.playerData["attackPoints"].ToString())));
-            this.enemyData.Add("defensePoints", rg.Next(int.Parse(this.playerData["defensePoints"].ToString())));
-
+            this.Player = player;
+            this.Enemy = enemy;
             InitializeComponent();
+            this.UpdateStats();
+            Log.Clear();
+        }
+
+        private Entity Player { get; set; }
+
+        private Entity Enemy { get; set; }
+
+        private void UpdateStats()
+        {
+            playerHealthBar.Value = (this.Player.Health * 100) / Constants.Constants.CharacterHealth;
+            playerEnergyBar.Value = this.Player.Energy;
+            enemyHealthBar.Value = (this.Enemy.Health * 100) / Constants.Constants.CharacterHealth;
+            enemyEnergyBar.Value = this.Enemy.Energy;
+            playerHealth.Content = this.Player.Health;
+            playerEnergy.Content = this.Player.Energy;
+            enemyHealth.Content = this.Enemy.Health;
+            enemyEnergy.Content = this.Enemy.Energy;
+        }
+
+        private void attackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Log.AppendText(this.Player.Attack(this.Enemy) + Environment.NewLine);
+            this.CheckPlayer();
+            Log.AppendText(this.Enemy.Attack(this.Player) + Environment.NewLine);
+            this.CheckEnemy();
+            Log.Focus();
+            Log.CaretIndex = Log.Text.Length;
+            Log.ScrollToEnd();
+            this.UpdateStats();
+        }
+
+        private void CheckPlayer()
+        {
+            if (!this.Player.isAlive)
+            {
+                MessageBox.Show("You have died!");
+                Environment.Exit(0);
+            }
+        }
+
+        private void CheckEnemy()
+        {
+            if (!this.Enemy.isAlive)
+            {
+                MessageBox.Show("You have defeated your enemy!");
+                this.Close();
+            }
         }
     }
 }

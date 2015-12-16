@@ -114,3 +114,6 @@ C:\Users\nikidimitrow\Desktop\oop-softuni\OOP-Teamwork\RPG Game\obj\Debug\RPG Ga
 C:\Users\nikidimitrow\Desktop\oop-softuni\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.exe
 C:\Users\nikidimitrow\Desktop\oop-softuni\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.pdb
 >>>>>>> 5924f0903f132e2a9b91b273a701323c2cb5ebd6
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\FightField.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML_MarkupCompile.lref
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\FightField.baml

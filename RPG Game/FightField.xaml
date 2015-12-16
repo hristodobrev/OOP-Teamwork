@@ -6,7 +6,21 @@
         xmlns:local="clr-namespace:RPG_Game"
         mc:Ignorable="d"
         Title="FightField" Height="300" Width="300">
+
     <Grid>
-        
+        <Canvas x:Name="FightFieldLayout">
+            <Button Name="attackButton" Content="Attack" Canvas.Left="10" Canvas.Top="238" Width="75" Click="attackButton_Click"/>
+            <ProgressBar Name="playerEnergyBar" Height="20" Canvas.Left="10" Canvas.Top="54" Width="100" Foreground="Red"/>
+            <Label Name="playerEnergy" Content="Energy" Canvas.Left="10" Canvas.Top="51"/>
+            <ProgressBar Name="playerHealthBar" Height="20" Canvas.Left="10" Canvas.Top="24" Width="100"/>
+            <Label Name="playerHealth" Content="Health" Canvas.Left="10" Canvas.Top="21" Height="26"/>
+            <ProgressBar Name="enemyEnergyBar" Height="20" Canvas.Left="180" Canvas.Top="54" Width="100" Foreground="Red"/>
+            <Label Name="enemyEnergy" Content="Energy" Canvas.Left="180" Canvas.Top="51"/>
+            <ProgressBar Name="enemyHealthBar" Height="20" Canvas.Left="180" Canvas.Top="24" Width="100"/>
+            <Label Name="enemyHealth" Content="Health" Canvas.Left="180" Canvas.Top="21"/>
+            <Label Content="Player" Canvas.Left="10" Height="26"/>
+            <Label Content="Enemy" Canvas.Left="180"/>
+            <TextBox Name="Log" Height="100" Canvas.Left="10" TextWrapping="Wrap" Text="TextBox" Canvas.Top="133" Width="272" Cursor="Arrow" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+        </Canvas>
     </Grid>
 </Window>

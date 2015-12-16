@@ -2,7 +2,7 @@
 {
     public static class Constants
     {
-        public static readonly int CharacterHealth = 100;
+        public static readonly int CharacterHealth = 200;
         public static readonly int CharacterEnergy = 100;
         public static readonly int CharacterAttackPoints = 20;
         public static readonly int CharacterDefensePoints = 10;

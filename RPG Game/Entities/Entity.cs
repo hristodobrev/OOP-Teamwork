@@ -3,11 +3,14 @@
     using Interfaces;
     using RPG_Game.Enums;
     using RPG_Game.Exceptions;
+    using System;
     using System.Windows;
     using System.Windows.Controls;
 
     public abstract class Entity : IUpdatable
     {
+        private const int AttackEnergyCost = 10;
+
         public bool isAlive = true;
 
         private string id;
@@ -55,7 +58,7 @@
 
             set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new EntityStatOutOfRangeException("Entity health cannot be zero or negative.", "Entity health");
                 }
@@ -134,6 +137,52 @@
             Canvas.SetTop(this.Image, this.Position.Y);
 
             GamePlayLayout.Children.Add(this.Image);
+        }
+
+        public string Attack(Entity target)
+        {
+            Random rnd = new Random();
+
+            int increasement = rnd.Next(1, 11);
+
+            int damage = this.AttackPoints - target.DefensePoints + increasement;
+
+            string attackArguments = string.Format("{0} hitted {1} for {2} damage.", this.Id, target.Id, damage);
+
+            if (this.Energy < AttackEnergyCost)
+            {
+                damage /= 4;
+                target.ResponseAttack(damage);
+                attackArguments = string.Format("(Not enough energy[Strength reduced by 75%]) {0} hitted {1} for {2} damage.", this.Id, target.Id, damage);
+            }
+            else
+            {
+                this.Energy -= AttackEnergyCost;
+                target.ResponseAttack(damage);
+            }
+
+            return attackArguments;
+        }
+
+        public void ResponseAttack(int damage)
+        {
+            if (this.Energy < 20)
+            {
+                this.Energy += 5;
+                if (this.Energy > Constants.Constants.CharacterEnergy)
+                {
+                    this.Energy = Constants.Constants.CharacterEnergy;
+                }
+            }
+            try
+            {
+                this.Health -= damage;
+            }
+            catch (EntityStatOutOfRangeException)
+            {
+                this.isAlive = false;
+                this.Health = 0;
+            }
         }
     }
 }
