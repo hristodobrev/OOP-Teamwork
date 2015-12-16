@@ -5,8 +5,11 @@
 
     public class Shield : Armor
     {
+        private static int HealthModifier = (int)(Constants.ItemAttackPointsModifier * 1.1);
+        private static int DeffenseModifier = (int)(Constants.ItemAttackPointsModifier * 0.2);
+
         public Shield(string id, Character itemHolder)
-            : base(id, itemHolder, Constants.ItemHealthModifier, Constants.ItemDeffensePointsModifier)
+            : base(id, itemHolder, HealthModifier, DeffenseModifier)
         {
 
         }

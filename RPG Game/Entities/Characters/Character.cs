@@ -12,14 +12,23 @@
 
     public abstract class Character : Entity, IControlable
     {
+        private int MaxHealth = Constants.Constants.CharacterHealth;
+        private int MaxEnergy = Constants.Constants.CharacterEnergy;
+
         private List<Item> inventory;
 
         protected Character(string id, int health, int energy, int attackPoints, int defensePoints, int x, int y)
             : base(id, health, energy, attackPoints, defensePoints, x, y)
         {
+            MaxHealth = health;
+            MaxEnergy = energy;
             this.inventory = new List<Item>();
             this.GeneratePlayerImage();
         }
+
+        public int GetMaxHealth { get { return MaxHealth; } }
+
+        public int GetMaxEnergy { get { return MaxEnergy; } }
 
         public void Move(Direction direction, List<Enemy> enemies, Canvas GamePlayLayout)
         {
@@ -73,9 +82,12 @@
             this.Image = playerImage;
         }
 
-        private void settingsButton_Click(Object sender, EventArgs e)
+        public void Equip(Item item)
         {
-
+            this.MaxHealth += item.HealthModifier;
+            this.MaxEnergy += item.EnergyModifier;
+            this.AttackPoints += item.AttackPointsModifier;
+            this.DefensePoints += item.DefensePointsModifier;
         }
     }
 }

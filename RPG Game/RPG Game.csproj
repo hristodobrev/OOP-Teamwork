@@ -104,6 +104,7 @@
     <Compile Include="Items\Armor.cs" />
     <Compile Include="Items\Axe.cs" />
     <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\ItemGenerator.cs" />
     <Compile Include="Items\Shield.cs" />
     <Compile Include="Items\Staff.cs" />
     <Compile Include="Items\Sword.cs" />

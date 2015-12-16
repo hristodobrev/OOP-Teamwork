@@ -1,4 +1,6 @@
 ﻿using RPG_Game.Entities;
+using RPG_Game.Entities.Characters;
+using RPG_Game.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,6 +64,7 @@ namespace RPG_Game
             Log.CaretIndex = Log.Text.Length;
             Log.ScrollToEnd();
             this.UpdateStats();
+            var charaa = new Mage("Penka", 2, 2);
         }
 
         private void CheckPlayer()
@@ -78,8 +81,14 @@ namespace RPG_Game
             if (!this.Enemy.isAlive)
             {
                 MessageBox.Show("You have defeated your enemy!");
+                (Character)(this.Player).
                 this.Close();
             }
+        }
+
+        public void EquipItem(Item item)
+        {
+            
         }
     }
 }
