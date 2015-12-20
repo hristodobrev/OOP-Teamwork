@@ -1,0 +1,49 @@
+-Constants
+
+-Entity : IUpdatable
+ -Enemy
+ -Character :  IControlable
+  -Warrior
+  -Mage
+  -Priest
+
+-Item
+ -Weapon : IEquipable
+  -Axe
+  -Sword
+ -Armor : IEquipable
+  -Shield
+  -Helmet
+  -Boots
+ -Potion : IConsumable
+
+-Obstacle
+
+-Interfaces
+ -IControlabe
+ -IConsumable
+ -IEquipable
+ -IUpdatable
+
+
+Constants - static class holding all constants in the game
+
+Entity - abstract class which will be inherited by characters and enemies
+Character - abstract class which user will have a control to (inherits Entity class, will be inherited by Warrior, Mage, Priest)
+Warrior, Mage, Priest - these are the races in the game, the user will have a choice which one of them to choose (inherits Character class)
+Enemy - class which can be initialized with different properties[different strenght of enemies] (iherits Character class)
+
+Item - abstract class
+Weapon - abstract class for weapons only (inherits Item, will be inherited by Axe, Sword)
+Axe, Sword - different kind of weapons
+Armor - abstract class for armors only (inherits Item, will be inherited by Shield, Helmet, Boots etc.)
+Shield, Helmet, Boots - different kind of armors
+Potion - different kind of potions (inherits Item)
+
+Obstacle - class for different kinds of obstacles (rock, tree, water etc.)
+
+Interfaces:
+IControlable - holds methods Move() and Flee()
+IConsumable - holds the property Ammount and Enumeration PotionType(Health, Energy)
+IEquipable - holds the properties HealthModifier, EnergyModifier, DefensePointsModifier, AttackPointsModifier
+IUpdatable - holds the method Update()
