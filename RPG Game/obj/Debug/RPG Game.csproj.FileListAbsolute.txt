@@ -1,0 +1,20 @@
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG Game.csprojResolveAssemblyReference.cache
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\Credits.baml
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\Gameplay.baml
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\MainWindow.baml
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\Credits.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\FightField.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\Gameplay.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\MainWindow.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\App.g.cs
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML_MarkupCompile.cache
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML_MarkupCompile.lref
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.exe
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.pdb
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\FightField.baml
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG XAML.g.resources
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG_Game.Properties.Resources.resources
+D:\Others\OOP\OOP-Teamwork\RPG Game\obj\Debug\RPG Game.csproj.GenerateResource.Cache
+D:\Others\OOP\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.exe.config
+D:\Others\OOP\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.exe
+D:\Others\OOP\OOP-Teamwork\RPG Game\bin\Debug\RPG XAML.pdb
