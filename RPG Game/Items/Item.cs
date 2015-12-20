@@ -1,25 +1,34 @@
 ﻿namespace RPG_Game.Items
 {
     using Entities.Characters;
+    using Exceptions;
     using Interfaces;
 
     public class Item : IHoldable
     {
-        protected Item(string id, Character itemHolder)
+        private int healthModifier;
+        private int energyModifier;
+        private int defenseModifier;
+        private int attackModifier;
+
+        protected Item(string id)
         {
             this.Id = id;
-            this.ItemHolder = itemHolder;
         }
 
         public int HealthModifier
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.healthModifier;
             }
-            set
+            protected set
             {
-                throw new System.NotImplementedException();
+                if (value < 0)
+                {
+                    throw new EntityStatOutOfRangeException("Health modifier cannot be negative.");
+                }
+                this.healthModifier = value;
             }
         }
 
@@ -27,11 +36,15 @@
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.energyModifier;
             }
-            set
+            protected set
             {
-                throw new System.NotImplementedException();
+                if (value < 0)
+                {
+                    throw new EntityStatOutOfRangeException("Energy modifier cannot be negative.");
+                }
+                this.energyModifier = value;
             }
         }
 
@@ -39,11 +52,15 @@
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.defenseModifier;
             }
-            set
+            protected set
             {
-                throw new System.NotImplementedException();
+                if (value < 0)
+                {
+                    throw new EntityStatOutOfRangeException("Deffense points modifier cannot be negative.");
+                }
+                this.defenseModifier = value;
             }
         }
 
@@ -51,16 +68,18 @@
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.attackModifier;
             }
-            set
+            protected set
             {
-                throw new System.NotImplementedException();
+                if (value < 0)
+                {
+                    throw new EntityStatOutOfRangeException("Attack points modifier cannot be negative.");
+                }
+                this.attackModifier = value;
             }
         }
 
         public string Id { get; set; }
-
-        public Character ItemHolder { get; set; }
     }
 }

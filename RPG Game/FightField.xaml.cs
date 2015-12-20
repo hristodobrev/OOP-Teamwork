@@ -44,7 +44,7 @@ namespace RPG_Game
 
         private void UpdateStats()
         {
-            playerHealthBar.Value = (this.Player.Health * 100) / Constants.Constants.CharacterHealth;
+            playerHealthBar.Value = (this.Player.Health * 100) / ((Character)this.Player).GetMaxHealth;
             playerEnergyBar.Value = this.Player.Energy;
             enemyHealthBar.Value = (this.Enemy.Health * 100) / Constants.Constants.CharacterHealth;
             enemyEnergyBar.Value = this.Enemy.Energy;
@@ -82,14 +82,15 @@ namespace RPG_Game
             if (!this.Enemy.isAlive)
             {
                 MessageBox.Show("You have defeated your enemy!");
-                //(Character)(this.Player)
+                this.EquipItem((Character)(this.Player));
                 this.Close();
             }
         }
 
-        public void EquipItem(Item item)
+        public void EquipItem(Character itemHolder)
         {
-            
+            Item item = ItemGenerator.GenerateItem();
+            itemHolder.Equip(item);
         }
     }
 }

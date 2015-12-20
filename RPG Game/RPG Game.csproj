@@ -79,6 +79,7 @@
     <Compile Include="Credits.xaml.cs">
       <DependentUpon>Credits.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Delegates\CharacterItemDelegate.cs" />
     <Compile Include="Entities\Characters\Character.cs" />
     <Compile Include="Entities\Characters\Mage.cs" />
     <Compile Include="Entities\Characters\Priest.cs" />

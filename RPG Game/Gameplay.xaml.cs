@@ -79,6 +79,12 @@ namespace RPG_Game
 
         private void DispatcherTimer_Tick(object sender, EventArgs e)
         {
+            if (this.player.Health < this.player.GetMaxHealth)
+            {
+                this.player.Health++;
+                CharacterHealthBar.Value = this.player.Health * 100 / this.player.GetMaxHealth;
+            }
+
             if (player.Position.X < mousePoint.X - (player.Image.Width / 2))
             {
                 player.Move(Direction.Right, this.enemies, GamePlayLayout);

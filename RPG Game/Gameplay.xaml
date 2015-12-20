@@ -9,5 +9,6 @@
         <Canvas.Background>
             <ImageBrush ImageSource="Resources/playGround.jpg"/>
         </Canvas.Background>
+        <ProgressBar Name="CharacterHealthBar" Height="10" Canvas.Left="10" Canvas.Top="10" Width="100"/>
     </Canvas>
 </Window>

@@ -9,9 +9,14 @@
     using System.Windows.Media.Imaging;
     using System;
     using System.Windows;
+    using Exceptions;
+    using RPG_Game.Delegates;
+    using System.Text;
 
     public abstract class Character : Entity, IControlable
     {
+        public event CharacterItemDelegate ItemAdded;
+
         private int MaxHealth = Constants.Constants.CharacterHealth;
         private int MaxEnergy = Constants.Constants.CharacterEnergy;
 
@@ -24,11 +29,46 @@
             MaxEnergy = energy;
             this.inventory = new List<Item>();
             this.GeneratePlayerImage();
+            this.ItemAdded += Character_ItemAdded;
         }
 
-        public int GetMaxHealth { get { return MaxHealth; } }
+        private void Character_ItemAdded(Item item)
+        {
+            StringBuilder itemInfo = new StringBuilder();
+            itemInfo.AppendFormat("{0}\n", item.Id);
+            itemInfo.AppendFormat("Health: {0}\n", item.HealthModifier);
+            itemInfo.AppendFormat("Energy: {0}\n", item.EnergyModifier);
+            itemInfo.AppendFormat("Defense: {0}\n", item.DefensePointsModifier);
+            itemInfo.AppendFormat("Attack: {0}", item.AttackPointsModifier);
 
-        public int GetMaxEnergy { get { return MaxEnergy; } }
+            MessageBox.Show(itemInfo.ToString());
+        }
+
+        public int GetMaxHealth
+        {
+            get { return MaxHealth; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new EntityStatOutOfRangeException("Max health cannot be negative or zero.");
+                }
+                this.MaxHealth = value;
+            }
+        }
+
+        public int GetMaxEnergy
+        {
+            get { return MaxEnergy; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new EntityStatOutOfRangeException("Max energy cannot be negative or zero.");
+                }
+                this.MaxEnergy = value;
+            }
+        }
 
         public void Move(Direction direction, List<Enemy> enemies, Canvas GamePlayLayout)
         {
@@ -60,7 +100,7 @@
 
                 if (Math.Abs(enemy.Position.X - this.Position.X) < 15 && Math.Abs(enemy.Position.Y - this.Position.Y) < 15)
                 {
-                   // enemy.Image.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/orc.png"));
+                    // enemy.Image.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/orc.png"));
 
                     FightField fieldWindow = new FightField(enemy, this);
                     fieldWindow.ShowDialog();
@@ -74,6 +114,15 @@
                 }
             }
 
+        }
+
+        public void AddItemToInventory(Item item)
+        {
+            if (this.ItemAdded != null)
+            {
+                this.ItemAdded(item);
+            }
+            this.inventory.Add(item);
         }
 
         public void Flee(Enemy enemy)
@@ -93,10 +142,15 @@
 
         public void Equip(Item item)
         {
-            this.MaxHealth += item.HealthModifier;
-            this.MaxEnergy += item.EnergyModifier;
-            this.AttackPoints += item.AttackPointsModifier;
-            this.DefensePoints += item.DefensePointsModifier;
+            if (!this.inventory.Contains(item))
+            {
+                this.AddItemToInventory(item);   
+            }
+
+            if (item is IEquipable)
+            {
+                ((IEquipable)(item)).UpdateStats(this);
+            }
         }
     }
 }

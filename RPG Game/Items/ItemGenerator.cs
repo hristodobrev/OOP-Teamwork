@@ -5,19 +5,19 @@
 
     public static class ItemGenerator
     {
-        public static Item GenerateItem(Character player)
+        public static Item GenerateItem()
         {
             int caseFactor = new Random().Next(1, 5);
             switch (caseFactor)
             {
                 case 1:
-                    return new Axe("CommonAxe", player);
+                    return new Axe("CommonAxe");
                 case 2:
-                    return new Shield("CommonShield", player);
+                    return new Shield("CommonShield");
                 case 3:
-                    return new Staff("CommonStaff", player);
+                    return new Staff("CommonStaff");
                 case 4:
-                    return new Sword("CommonSword", player);
+                    return new Sword("CommonSword");
             }
             return null;
         }

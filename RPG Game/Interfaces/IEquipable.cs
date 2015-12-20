@@ -4,14 +4,6 @@
 
     public interface IEquipable
     {
-        Character ItemHolder { get; set; }
-
-        int HealthModifier { get; set; }
-
-        int EnergyModifier { get; set; }
-
-        int DefensePointsModifier { get; set; }
-
-        int AttackPointsModifier { get; set; }
+        void UpdateStats(Character itemHolder);
     }
 }

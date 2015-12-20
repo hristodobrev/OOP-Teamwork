@@ -4,6 +4,12 @@
 
     public interface IHoldable
     {
-        Character ItemHolder { get; set; }
+        int HealthModifier { get; }
+
+        int EnergyModifier { get; }
+
+        int DefensePointsModifier { get; }
+
+        int AttackPointsModifier { get; }
     }
 }
