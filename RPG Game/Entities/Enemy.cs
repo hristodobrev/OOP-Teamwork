@@ -17,15 +17,20 @@
 
         public override void Update(Canvas GamePlayLayout)
         {
-            Image img = new Image();
-            img.Source = this.Image.Source;
+            Image.Height = 45;
+            Image.Width = 45;
 
-            GamePlayLayout.Children.Remove(img);
+            GamePlayLayout.Children.Remove(Image);
 
-            Canvas.SetLeft(img, this.Position.X);
-            Canvas.SetTop(img, this.Position.Y);
+            Canvas.SetLeft(Image, this.Position.X);
+            Canvas.SetTop(Image, this.Position.Y);
 
-            GamePlayLayout.Children.Add(img);
+            GamePlayLayout.Children.Add(Image);
+
+            if (this.Health <= 0)
+            {
+                GamePlayLayout.Children.Remove(Image);
+            }
         }
 
         private void GenerateEnemyImage()
