@@ -60,11 +60,12 @@ namespace RPG_Game
             this.CheckPlayer();
             Log.AppendText(this.Enemy.Attack(this.Player) + Environment.NewLine);
             this.CheckEnemy();
+
+
             Log.Focus();
             Log.CaretIndex = Log.Text.Length;
             Log.ScrollToEnd();
             this.UpdateStats();
-            var charaa = new Mage("Penka", 2, 2);
         }
 
         private void CheckPlayer()
@@ -81,7 +82,7 @@ namespace RPG_Game
             if (!this.Enemy.isAlive)
             {
                 MessageBox.Show("You have defeated your enemy!");
-                (Character)(this.Player).
+                //(Character)(this.Player)
                 this.Close();
             }
         }

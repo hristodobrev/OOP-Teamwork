@@ -9,7 +9,14 @@
 
     <Grid>
         <Canvas x:Name="FightFieldLayout">
-            <Button Name="attackButton" Content="Attack" Canvas.Left="10" Canvas.Top="238" Width="75" Click="attackButton_Click"/>
+            <Button Name="attackButton" 
+                    Content="Attack" 
+                    Canvas.Left="10" 
+                    Canvas.Top="238" 
+                    Width="75" 
+                    Click="attackButton_Click"
+                    />
+            
             <ProgressBar Name="playerEnergyBar" Height="20" Canvas.Left="10" Canvas.Top="54" Width="100" Foreground="Red"/>
             <Label Name="playerEnergy" Content="Energy" Canvas.Left="10" Canvas.Top="51"/>
             <ProgressBar Name="playerHealthBar" Height="20" Canvas.Left="10" Canvas.Top="24" Width="100"/>
@@ -21,6 +28,7 @@
             <Label Content="Player" Canvas.Left="10" Height="26"/>
             <Label Content="Enemy" Canvas.Left="180"/>
             <TextBox Name="Log" Height="100" Canvas.Left="10" TextWrapping="Wrap" Text="TextBox" Canvas.Top="133" Width="272" Cursor="Arrow" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+            
         </Canvas>
     </Grid>
 </Window>

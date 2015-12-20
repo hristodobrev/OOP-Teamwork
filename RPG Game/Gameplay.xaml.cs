@@ -138,14 +138,14 @@ namespace RPG_Game
                     switch (map[i, j])
                     {
                         case '#':
-                            myImage.Source = new BitmapImage(new Uri(@"D:\Others\OOP\OOP-Teamwork\RPG Game\Resources\tree2.png"));
+                            myImage.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/tree2.png"));
                             break;
                         case '@':
-                            myImage.Source = new BitmapImage(new Uri(@"D:\Others\OOP\OOP-Teamwork\RPG Game\Resources\tree1.png"));
+                            myImage.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/tree1.png"));
                             break;
                     }
-                    int x = (i) * 50;
-                    int y = (j) * 50;
+                    int x = i * 50;
+                    int y = j * 50;
 
                     Canvas.SetTop(myImage, x);
                     Canvas.SetLeft(myImage, y);

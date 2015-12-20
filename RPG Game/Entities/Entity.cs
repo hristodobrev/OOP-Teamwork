@@ -131,12 +131,15 @@
 
         public virtual void Update(Canvas GamePlayLayout)
         {
+            //TODO : update
             GamePlayLayout.Children.Remove(this.Image);
 
             Canvas.SetLeft(this.Image, this.Position.X);
             Canvas.SetTop(this.Image, this.Position.Y);
 
             GamePlayLayout.Children.Add(this.Image);
+
+            
         }
 
         public string Attack(Entity target)

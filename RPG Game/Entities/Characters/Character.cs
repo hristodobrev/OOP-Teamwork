@@ -57,15 +57,23 @@
         {
             foreach (Enemy enemy in enemies)
             {
+
                 if (Math.Abs(enemy.Position.X - this.Position.X) < 15 && Math.Abs(enemy.Position.Y - this.Position.Y) < 15)
                 {
-                    enemy.Image.Source = new BitmapImage(new Uri(@"D:\Others\OOP\OOP-Teamwork\RPG Game\Resources\CharRight.jpg"));
-                    enemies.Remove(enemy);
+                   // enemy.Image.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/orc.png"));
+
                     FightField fieldWindow = new FightField(enemy, this);
                     fieldWindow.ShowDialog();
+
+                    GamePlayLayout.Children.Remove(enemy.Image);
+                    enemy.Update(GamePlayLayout);
+                    enemies.Remove(enemy);
+
+
                     return;
                 }
             }
+
         }
 
         public void Flee(Enemy enemy)
@@ -76,9 +84,10 @@
         private void GeneratePlayerImage()
         {
             Image playerImage = new Image();
-            playerImage.Width = 25;
-            playerImage.Height = 25;
-            playerImage.Source = new BitmapImage(new Uri(@"D:\Others\OOP\OOP-Teamwork\RPG Game\Resources\player.png"));
+            playerImage.Width = 60;
+            playerImage.Height = 60;
+            //here some problem
+            playerImage.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/player.png"));
             this.Image = playerImage;
         }
 
